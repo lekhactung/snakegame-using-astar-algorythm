@@ -7,7 +7,7 @@
 ---
 
 ## ⚙️ Yêu cầu
-- Python 3.8+
+- Python 
 - Thư viện:
   - `pygame`
 Cài đặt bằng:
@@ -15,8 +15,7 @@ Cài đặt bằng:
     pip install pygame
 ```
 ---
-## 🚀 Cách chạy
-Chạy trò chơi với AI A*:
+## 🚀 Cách chạy:
 ```bash
     python snakegame_using_astar.py
 ```

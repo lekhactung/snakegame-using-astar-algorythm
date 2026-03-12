@@ -1,6 +1,6 @@
 
 import pygame, sys, time, random, heapq
-difficulty = 30
+difficulty = 40
 
 frame_size_x = 600
 frame_size_y = 400
