@@ -1,57 +1,58 @@
-# 🐍 Snake Game Using A* Algorithm
+# Snake Game Using A* Algorithm
 
-## 📖 Giới thiệu
-Đây là dự án mô phỏng trò chơi **Snake (Rắn săn mồi)**.  
-Điểm đặc biệt là thay vì người chơi điều khiển, con rắn sẽ được điều khiển tự động bằng **thuật toán A*** để tìm đường đi ngắn nhất đến thức ăn.
+## Introduce
+This project simulates the Snake game. 
 
+The special feature is instead of being controlled by a player, the snake 
+is automatically controlled using the A* algorithm to find the shortest path to the food.
 ---
 
-## ⚙️ Yêu cầu
+## Requirements
 - Python 
-- Thư viện:
+- Libary:
   - `pygame`
-Cài đặt bằng:
+install by:
 ```bash
     pip install pygame
 ```
 ---
-## 🚀 Cách chạy:
+## How to use
 ```bash
     python snakegame_using_astar.py
 ```
 ---
-## 🎮 Cách hoạt động
+## How this works
 
-Rắn bắt đầu ở góc trên bên trái màn hình.
+The snake starts at the top-left corner of the screen.
 
-Mỗi khi sinh ra thức ăn, AI sẽ dùng A* để tính đường đi ngắn nhất từ đầu rắn → thức ăn, tránh va vào thân rắn.
+Each time food appears, the agent uses the A* algorithm to calculate 
+the shortest path from the snake’s head to the food while avoiding collisions with its own body.
 
-Nếu không còn đường hợp lệ → game over.
+If there is no valid path left → game over.
 
-Khi ăn được thức ăn, rắn dài thêm và điểm số (Score) tăng.
+When the snake eats food, it grows longer and the score increases.
 
 ---
-## 🧠 Thuật toán A*
-Thuật toán A* là một giải thuật tìm đường (pathfinding), dùng công thức:
+## A* algorithm
+A* (A Star) is a computer algorithm that is widely used in 
+pathfinding and graph traversal. The algorithm efficiently plots a walkable path between multiple nodes, or points, on the graph
+
+A* expands paths that are already less expensive by using this function:
 ```bash
     f(n) = g(n) + h(n)  
 ```
-Trong đó :
-- g(n): chi phí đi từ điểm đầu đến ô n
-- h(n): hàm ước lượng (heuristic) khoảng cách từ n đến đích
-- Ở đây dùng Manhattan distance cho heuristic.
+- f(n) = total estimated cost of path through node n
+- g(n) = cost so far to reach node n
+- h(n) = estimated cost from n to goal. This is the heuristic part of the cost function
+- this case using Manhattan distance for heuristic
 
-A* đảm bảo tìm được đường ngắn nhất (nếu tồn tại).
+The A* algorithm guarantees finding the shortest path (if one exists).
 
 ---
-## 📷 Minh họa
+## Demo
 ![Demo](./assets/snakegame_demo_run.gif)
 ---
-## 🔗 Nguồn tham khảo
-- Dự án này được xây dựng dựa trên Snake Game từ Project của **rajatdiptabiswas** 
-- Link repo: https://github.com/rajatdiptabiswas/snake-pygame/tree/master
+## 🔗 References
+- This project is built based on the Snake Game from the project by **rajatdiptabiswas**.
+- Repo URL : https://github.com/rajatdiptabiswas/snake-pygame/tree/master
 ---
-## ‍🤝 Thành viên
-- Lê Khắc Tùng
-- Dương Ngọc Hoàng Huy
-- Trần Minh Triết
