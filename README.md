@@ -5,6 +5,7 @@ This project simulates the Snake game.
 
 The special feature is instead of being controlled by a player, the snake 
 is automatically controlled using the A* algorithm to find the shortest path to the food.
+
 ---
 
 ## Requirements
